@@ -23,7 +23,7 @@ Set `PORT` to use another port.
 │   ├── main.jsx               # mounts <App/>, imports the stylesheets
 │   ├── App.jsx                # sections in page order
 │   ├── hooks.js               # usePlatform, useReveal, prefersReducedMotion
-│   ├── data/site.js           # all page content: downloads, lessons, missions, gallery, FAQ…
+│   ├── data/site.js           # all page content: downloads, lessons, missions, drones, FAQ…
 │   ├── components/            # one component per section (Nav, Hero, Why, Features, Controls,
 │   │                          #   FlightSchool, Missions, Drones, Gallery, Checklist, Faq, Footer)
 │   │                          #   plus Icon/Sprite and Scene (sunset city canvas)
