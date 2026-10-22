@@ -1,18 +1,18 @@
 import { Icon } from "./Icon.jsx";
 
-/* links point at the Pluto Drones store site, which owns these pages */
-const SITE = "https://www.plutodrones.com";
+/* links match the Pluto AirLink footer: store, company and policy pages live on dronaaviation.com */
+const SITE = "https://www.dronaaviation.com";
 
 const COLUMNS = [
   ["Products", [["/store#drone-kits", "Drone Kits"], ["/store/spares", "Spares"], ["/store/accessories", "Accessories"], ["/store#merchandise", "Merchandise"]]],
   ["Company", [["/about", "About Us"], ["/contact", "Contact Us"]]],
   ["Resources", [["/blogs", "Blogs"], ["/hardware", "Hardware"], ["/software", "Softwares"], ["/news", "News"]]],
-  ["Download App", [["https://apps.apple.com/in/app/pluto-controller/id1173323776", "iOS"], ["https://play.google.com/store/apps/details?id=com.drona.controller", "Android"]]],
+  ["Download App", [["https://apps.apple.com/in/app/pluto-controller/id1173323776", "iOS"], ["https://play.google.com/store/apps/details?id=com.drona.controller&pcampaignid=web_share", "Android"]]],
 ];
 
 const SOCIAL = [
   ["i-ig", "Instagram", "https://www.instagram.com/plutodrones"],
-  ["i-in", "LinkedIn", "https://www.linkedin.com/company/drona-aviation-pvt-ltd-/"],
+  ["i-in", "LinkedIn", "https://www.linkedin.com/company/drona-aviation-pvt-ltd-/posts/?feedView=all"],
   ["i-x", "X", "https://x.com/dronaaviation"],
   ["i-fb", "Facebook", "https://www.facebook.com/plutodrones"],
   ["i-yt", "YouTube", "https://www.youtube.com/dronaaviation"],
