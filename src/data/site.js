@@ -13,8 +13,6 @@ export const NAV_LINKS = [
   ["basics", "Basics"],
   ["school", "Flight School"],
   ["missions", "Missions"],
-  ["gallery", "Gallery"],
-  ["checklist", "Checklist"],
   ["faq", "FAQ"],
 ];
 
@@ -74,32 +72,9 @@ export const HERO_CARDS = [
   { map: "supermarket", label: "Supermarket", title: "Truck loading", img: IMG + "supermarket-delivery-1.jpg" },
 ];
 
-export const GALLERY = [
-  ["multi-point-delivery-hero.webp", "Drone carrying a first-aid kit above a New York street"],
-  ["forest-fire-hero.webp", "Drone flying between trees in the forest"],
-  ["supermarket-delivery-1.jpg", "Glowing drop zone inside the supermarket"],
-  ["construction-material-delivery-1.jpg", "Site material store and drone dispatch point"],
-  ["night-shift-inspection-1.jpg", "Drone inspecting a wall on the construction site at night"],
-  ["search-rescue-hero.webp", "Drone carrying a parcel between buildings by the sea"],
-  ["precision-delivery-1.webp", "Delivery zone marked on a city street"],
-  ["forest-fire-2.webp", "Drone carrying a water tank towards a forest fire"],
-  ["tiger-tracker-1.webp", "Drone landed on an H landing pad"],
-].map(([file, alt]) => ({ src: IMG + file, alt }));
-
 export const DRONES = [
-  { id: "d-guru", name: "Pluto Guru", tag: "For experienced pilots", text: "230 mm trainer with more power.", specs: [["Mass", "130 g"], ["Battery", "4S 2200 mAh"], ["Max tilt", "32°"]] },
-  { id: "d-racer", name: "Racing Drone", tag: "For speed", text: "5″ FPV quad, built for Acro.", specs: [["Mass", "720 g"], ["Battery", "4S 1800 mAh"], ["Max tilt", "45°"]] },
-];
-
-export const CHECKLIST = [
-  ["I can hover and land in PlutoSim", "Flight School done, no crashes."],
-  ["Open space, away from people", "No crowds, roads or wires."],
-  ["Allowed airspace", "No airports. Stay below 120 m."],
-  ["Calm weather", "Light wind, no rain."],
-  ["Batteries charged", "Drone and transmitter."],
-  ["Props tight and undamaged", "No chips or cracks."],
-  ["Throttle down before arming", "Stand back 3 m."],
-  ["Always in sight", "Keep it in sight."],
+  { id: "pluto", name: "Pluto", img: "/assets/images/drones/pluto.webp", size: [1400, 726], alt: "Pluto drone with prop guards and camera", text: "160 mm trainer. Stable and forgiving.", specs: [["Mass", "54 g"], ["Battery", "1S 300 mAh"], ["Max tilt", "22°"]] },
+  { id: "guru", name: "Pluto Guru", tag: "For experienced pilots", img: "/assets/images/drones/pluto-guru.webp", size: [1022, 461], alt: "Pluto Guru drone", text: "230 mm trainer with more power.", specs: [["Mass", "130 g"], ["Battery", "4S 2200 mAh"], ["Max tilt", "32°"]] },
 ];
 
 export const FAQ = [
