@@ -1,0 +1,21 @@
+/* Drones: 3D Pluto stage and spec cards for the other airframes */
+#drones{overflow:hidden;isolation:isolate}
+#drones::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(40% 50% at 25% 60%,rgba(255,122,26,.16),transparent 70%)}
+.drones{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:stretch}
+.drone-main{display:flex;flex-direction:column}
+/* top-view drone drawings (SVG symbols in index.html), slowly turning */
+.drone-art{width:min(100%,520px);margin:30px auto 0;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6)) drop-shadow(0 0 60px rgba(255,122,26,.18));animation:hover 6s ease-in-out infinite}
+.dcard-art{position:absolute;top:22px;right:22px;width:150px;opacity:.95;filter:drop-shadow(0 16px 20px rgba(0,0,0,.6))}
+@keyframes hover{50%{transform:translateY(-10px) rotate(3deg)}}
+.drone-info{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:22px;flex-wrap:wrap}
+.drone-info h3,.dcard h3{font-size:clamp(28px,2.8vw,38px)}
+.drone-info p,.dcard p{margin:8px 0 0;color:var(--ink-2);font-size:17px;max-width:44ch}
+.spec{display:flex;gap:26px;margin:18px 0 0}
+.spec dt{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.spec dd{margin:2px 0 0;font-size:18px;font-weight:600}
+.drone-side{display:grid;gap:24px}
+.dcard{padding:32px;border-radius:var(--radius-lg);display:flex;flex-direction:column;justify-content:flex-end;min-height:260px;background:radial-gradient(90% 80% at 100% 0%,rgba(255,122,26,.12),transparent 60%),var(--card)}
+.tag{align-self:flex-start;margin-bottom:auto;font-size:13px;font-weight:600;color:var(--signal);padding:6px 12px;border-radius:999px;background:var(--signal-soft)}
+.dcard h3{margin-top:28px}
+@media(max-width:1000px){.drones{grid-template-columns:1fr}}
+@media(max-width:560px){.spec{gap:18px}.dcard{padding:24px}.dcard-art{width:100px}}

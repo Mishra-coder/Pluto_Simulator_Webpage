@@ -1,0 +1,25 @@
+/* Shared components: buttons, arrow links, keycaps, tabs */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:60px;padding:0 30px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-signal{background:linear-gradient(180deg,#ff8a2e,var(--signal) 55%,var(--signal-d));color:#140800;box-shadow:0 12px 40px -10px var(--glow),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-signal:hover{transform:translateY(-2px);box-shadow:0 18px 50px -10px var(--glow),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-ghost{background:rgba(7,11,19,.35);color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1.5px #fff}
+.btn-sm{height:46px;padding:0 22px;font-size:16px}
+
+/* round arrow used on cards */
+.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 2px rgba(255,255,255,.9);color:#fff;transition:background .25s,color .25s,transform .25s var(--ease)}
+.arrow svg{width:20px;height:20px}
+a:hover > .arrow,a:hover .arrow,.arrow:hover{background:var(--signal);box-shadow:none;color:#140800}
+
+.kbd{font-family:var(--mono);font-size:12px;padding:2px 7px;border-radius:6px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px var(--line-2),inset 0 -2px 0 rgba(255,255,255,.06);color:var(--ink)}
+
+/* segmented filter: big tiles (Flight School) or a vertical list (Missions) */
+.seg{display:flex;gap:12px;flex-wrap:wrap}
+.seg button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:200px;min-height:104px;padding:18px 20px;line-height:1.2;border:0;border-radius:16px;font:500 17px var(--sans);color:var(--ink);background:var(--card);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background .25s,box-shadow .25s}
+.seg button svg{width:26px;height:26px;flex:none;margin-bottom:2px}
+.seg button small{display:block;font-size:13px;font-weight:400;color:var(--ink-3)}
+.seg button:hover{background:var(--card-2)}
+.seg button[aria-selected="true"]{background:radial-gradient(120% 140% at 50% 0%,rgba(255,122,26,.55),rgba(255,122,26,.12) 70%);box-shadow:inset 0 0 0 1px rgba(255,122,26,.6),0 10px 40px -14px var(--glow)}
+.seg button[aria-selected="true"] small{color:#ffd2b0}
+@media(max-width:700px){.seg button{min-width:0;min-height:96px;padding:14px 12px;flex:1 1 calc(50% - 6px)}}

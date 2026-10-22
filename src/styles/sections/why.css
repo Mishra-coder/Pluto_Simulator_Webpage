@@ -1,0 +1,47 @@
+/* Why simulate: feature trio, sim-screen preview and the "smarter" band */
+.why-top{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.why-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.why-feats h3{font-size:20px;letter-spacing:-.02em;margin-top:22px}
+.why-feats p{margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45}
+
+/* sim-screen preview: a real mission image with HUD panels laid over it */
+.sim{position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:16/10;box-shadow:inset 0 0 0 1px var(--line-2),0 40px 80px -40px rgba(0,0,0,.9)}
+.sim > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sim::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line-2);border-radius:inherit;pointer-events:none}
+.sim .card{position:absolute;top:16px;bottom:16px;border-radius:16px;padding:16px;background:rgba(9,13,22,.78);font-size:13px}
+.sim-tele{left:16px;width:clamp(150px,22%,190px);display:flex;flex-direction:column;gap:12px}
+.sim-status{display:flex;align-items:center;justify-content:space-between;color:#7fd3ff}
+.sim-status svg{width:30px;height:30px}
+.batt{width:34px;height:16px;border-radius:4px;box-shadow:inset 0 0 0 1.5px var(--ok);padding:2.5px;position:relative}
+.batt::after{content:"";position:absolute;right:-4px;top:5px;width:2px;height:6px;background:var(--ok);border-radius:1px}
+.batt i{display:block;height:100%;width:80%;background:var(--ok);border-radius:2px;transition:width 1s}
+.sim dl{margin:0;display:grid;gap:8px}
+.sim dt{color:var(--ink-2);font-size:12px}
+.sim dd{margin:0;font-size:15px}
+.sim dd b{font-size:20px;font-weight:600;font-variant-numeric:tabular-nums}
+.horizon{width:100%;margin-top:auto}
+.roll{transform-origin:60px 56px;transition:transform .3s linear}
+.mode{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
+.mode i{width:10px;height:10px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
+.sim-panel{right:16px;width:clamp(170px,27%,230px);display:flex;flex-direction:column;gap:6px}
+.sim-panel .row{padding:9px 10px;border-radius:10px;background:rgba(255,255,255,.04)}
+.sim-panel small{display:block;color:var(--ink-3);font-size:11px}
+.sim-panel b{font-weight:500}
+.sim-panel .toggle{display:flex;justify-content:space-between;align-items:center}
+.sim-panel .toggle i{width:34px;height:20px;border-radius:999px;background:rgba(255,255,255,.18);position:relative}
+.sim-panel .toggle i::after{content:"";position:absolute;left:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .2s}
+.sim-panel .toggle i.on{background:var(--ok)}
+.sim-panel .toggle i.on::after{transform:translateX(14px)}
+
+/* "a safer, smarter way" band */
+.smarter{display:grid;grid-template-columns:1.1fr .9fr 1fr;gap:32px;align-items:center;margin-top:56px;padding:44px;border-radius:var(--radius-lg)}
+.smarter h2{font-size:clamp(30px,3.4vw,48px);margin:0}
+.smarter .lede{font-size:18px}
+.pad-img{width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.7))}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.ticks li{display:flex;gap:16px;align-items:center;color:var(--ink-2);font-size:15px}
+.ticks b{display:block;color:var(--ink);font-size:17px;font-weight:600}
+.ticks .icon{flex:none}
+
+@media(max-width:1100px){.why-top{grid-template-columns:1fr}.smarter{grid-template-columns:1fr 1fr}.smarter > div:first-child{grid-column:1/-1}}
+@media(max-width:700px){.why-feats{grid-template-columns:1fr}.smarter{grid-template-columns:1fr;padding:28px}.sim{aspect-ratio:3/4}.sim-tele{bottom:auto}.sim-panel{top:auto}}

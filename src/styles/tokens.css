@@ -1,0 +1,16 @@
+/* Design tokens and self-hosted fonts */
+@font-face{font-family:"Geist";src:url("/assets/fonts/Geist-Variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("/assets/fonts/GeistMono-Variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+
+:root{
+  --bg:#070b13; --bg-2:#0a0f19; --card:rgba(14,19,30,.78); --card-solid:#0e131e; --card-2:#141b29;
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
+  --ink:#f5f7fb; --ink-2:#b4bccb; --ink-3:#7a8396;
+  --signal:#ff7a1a; --signal-d:#e5640a; --signal-soft:rgba(255,122,26,.14); --glow:rgba(255,122,26,.45);
+  --brand-blue:#38bdf8;
+  --ok:#3adb8a; --warn:#ffc24b;
+  --radius:20px; --radius-lg:28px;
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
