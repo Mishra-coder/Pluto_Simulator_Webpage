@@ -1,33 +1,13 @@
-import { useEffect, useRef } from "react";
 import { Icon } from "./Icon.jsx";
-import Scene from "./Scene.jsx";
 import { DOWNLOADS, HERO_CARDS } from "../data/site.js";
-import { mountDrone } from "../lib/droneViewer.js";
 
-/* 01 · Hero: sunset city, the 3D Pluto, headline, both downloads and four mission cards */
+/* 01 · Hero: sunset city photo with the Pluto (CSS background), headline, both downloads and four mission cards */
 export default function Hero({ platform, onPickMap }) {
-  const stage = useRef(null);
-
-  /* three.js + the model load after first paint so they never block the page.
-     Each mount gets its own canvas: two renderers sharing one GL context corrupt each other */
-  useEffect(() => {
-    const canvas = document.createElement("canvas");
-    canvas.setAttribute("aria-label", "3D model of the Pluto drone. Drag to rotate.");
-    stage.current.appendChild(canvas);
-    let dispose = null, cancelled = false;
-    mountDrone(stage.current, canvas)
-      .then((d) => { if (cancelled) d(); else dispose = d; })
-      .catch((err) => console.warn("3D drone unavailable:", err));
-    return () => { cancelled = true; dispose?.(); canvas.remove(); };
-  }, []);
-
   /* the visitor's OS gets the orange button and goes first */
   const order = platform === "win" ? ["win", "mac"] : ["mac", "win"];
 
   return (
     <header className="hero" id="top">
-      <Scene className="hero-bg" seed={3} sun={0.82} horizon={0.66} />
-      <div className="stage" ref={stage} />
       <div className="wrap">
         <div className="hero-copy">
           <span className="eyebrow reveal">Drone simulator for everyone</span>
