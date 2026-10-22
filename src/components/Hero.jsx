@@ -11,8 +11,8 @@ export default function Hero({ platform, onPickMap }) {
       <div className="wrap">
         <div className="hero-copy">
           <span className="eyebrow reveal">Drone simulator for everyone</span>
-          <h1 className="reveal">Learn to fly.<br /><span className="hl">Before</span> you fly.</h1>
-          <p className="lede reveal">The realistic drone simulator for Pluto drones. Crash, reset, fly again.</p>
+          <h1 className="reveal">Learn to fly<br /><span className="hl">Before</span> you fly</h1>
+          <p className="lede reveal">The realistic drone simulator for Pluto drones Crash reset fly again</p>
           <div className="ctas reveal">
             {order.map((key, i) => {
               const d = DOWNLOADS[key];

@@ -10,8 +10,8 @@ export default function Drones() {
     <section id="drones">
       <div className="wrap">
         <span className="eyebrow reveal">Designed for Pluto drones</span>
-        <h2 className="reveal">Fly with the<br />Pluto family.</h2>
-        <p className="lede reveal">Three airframes, each with its own handling.</p>
+        <h2 className="reveal">Fly with the<br />Pluto family</h2>
+        <p className="lede reveal">Three airframes each with its own handling</p>
         <div className="drones">
           {DRONES.map((d) => (
             <article key={d.id} className="drone reveal">

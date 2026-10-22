@@ -8,7 +8,7 @@ const CALLOUTS = [
   { title: "Throttle", sub: "Left stick ↑ ↓", x: 196, y: 64, end: "end", path: "M200 70H346V116", dot: [346, 116] },
   { title: "Yaw", sub: "Left stick ← →", x: 196, y: 286, end: "end", path: "M200 292H296V137H325", dot: [325, 137] },
   { title: "Pitch", sub: "Right stick ↑ ↓", x: 708, y: 0, end: "start", path: "M700 6H506V183", dot: [506, 183] },
-  { title: "Auto take-off", sub: "Y button", x: 708, y: 114, end: "start", path: "M700 120H574", dot: [574, 120] },
+  { title: "Auto take off", sub: "Y button", x: 708, y: 114, end: "start", path: "M700 120H574", dot: [574, 120] },
   { title: "Reset", sub: "B button", x: 708, y: 196, end: "start", path: "M700 202H630V149H603", dot: [603, 149] },
   { title: "Arm / Disarm", sub: "A button", x: 708, y: 286, end: "start", path: "M700 292H610V177H574", dot: [574, 177] },
   { title: "Camera view", sub: "X button", x: 708, y: 376, end: "start", path: "M700 382H532V161", dot: [532, 161] },
@@ -17,14 +17,14 @@ const CALLOUTS = [
 
 const KEYS = [
   [["W", "S"], "Throttle"], [["A", "D"], "Yaw"], [["↑", "↓"], "Pitch"], [["←", "→"], "Roll"],
-  [["Enter"], "Arm"], [["Space"], "Auto take-off"], [["C"], "Camera"], [["R"], "Reset"],
+  [["Enter"], "Arm"], [["Space"], "Auto take off"], [["C"], "Camera"], [["R"], "Reset"],
 ];
 
 const SUPPORT = [
-  ["i-check", "Plug and play", "Xbox, PlayStation and more."],
-  ["i-drone", "RC radios too", "RadioMaster, FrSky, FlySky."],
-  ["i-gear", "Adjust settings", "Deadzone, expo, sensitivity."],
-  ["i-keyboard", "No pad? No problem", "Keyboard works too."],
+  ["i-check", "Plug and play", "Xbox PlayStation and more"],
+  ["i-drone", "RC radios too", "RadioMaster FrSky FlySky"],
+  ["i-gear", "Adjust settings", "Deadzone expo sensitivity"],
+  ["i-keyboard", "No pad? No problem", "Keyboard works too"],
 ];
 
 /* 07 · Controls: sim desk photo behind the heading (CSS background), controller diagram and support card */
@@ -34,11 +34,11 @@ export default function Controls() {
       <div className="wrap">
         <span className="eyebrow reveal">Practise with your setup</span>
         <h2 className="reveal">Fly with a controller</h2>
-        <p className="lede reveal">Mode 2, just like a real transmitter.</p>
+        <p className="lede reveal">Mode 2 just like a real transmitter</p>
         <div className="ctl">
           <div className="diagram reveal">
             <svg viewBox="0 -40 900 545" role="img" aria-labelledby="dgT">
-              <title id="dgT">Controller layout: left stick moves throttle up and down and yaw left and right; right stick moves pitch forward and back and roll left and right. The bumpers change flight mode, A arms and disarms, Y takes off automatically, X changes the camera view and B resets.</title>
+              <title id="dgT">Controller layout: left stick moves throttle up and down and yaw left and right; right stick moves pitch forward and back and roll left and right The bumpers change flight mode A arms and disarms Y takes off automatically X changes the camera view and B resets</title>
               <image className="pad" href="/assets/images/controls/gamepad.webp" x="240" y="66" width="420" height="287" />
               <g className="lines">
                 {CALLOUTS.map((c) => <g key={c.title}><path d={c.path} /><circle cx={c.dot[0]} cy={c.dot[1]} r="5" /></g>)}
@@ -54,7 +54,7 @@ export default function Controls() {
             </div>
           </div>
           <div className="support card reveal">
-            <div className="support-head"><Icon id="i-pad" /><div><h3>Controller support</h3><p>Gamepads and RC transmitters.</p></div></div>
+            <div className="support-head"><Icon id="i-pad" /><div><h3>Controller support</h3><p>Gamepads and RC transmitters</p></div></div>
             <div className="support-grid">
               {SUPPORT.map(([icon, title, text]) => <div key={title}><Icon id={icon} /><b>{title}</b><span>{text}</span></div>)}
             </div>

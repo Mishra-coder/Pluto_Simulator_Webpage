@@ -10,7 +10,7 @@ export default function FlightSchool() {
       <div className="wrap">
         <span className="eyebrow reveal">Step by step challenges</span>
         <h2 className="reveal">Flight School</h2>
-        <p className="sub reveal">15 lessons. One skill at a time.</p>
+        <p className="sub reveal">15 lessons One skill at a time</p>
         <div className="seg reveal" role="tablist" aria-label="Lesson blocks">
           {LESSON_BLOCKS.map((b) => (
             <button key={b.key} role="tab" aria-selected={block === b.key} onClick={() => setBlock(b.key)}>

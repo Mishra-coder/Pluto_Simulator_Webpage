@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="foot-wrap">
         <div className="foot">
           <div className="foot-contact">
-            <a className="foot-logo" href="#top" aria-label="PlutoSim, back to top"><img src="/assets/brand/logo.svg" alt="" /></a>
+            <a className="foot-logo" href="#top" aria label="PlutoSim back to top"><img src="/assets/brand/logo.svg" alt="" /></a>
             <h4>Contact Us</h4>
             <a className="foot-line" href="tel:+917066011808"><i><Icon id="i-phone" /></i>+91 70660 11808</a>
             <a className="foot-line" href="mailto:support@plutodrones.com"><i><Icon id="i-mail" /></i>support@plutodrones.com</a>

@@ -43,13 +43,13 @@ export default function Why() {
       <div className="wrap">
         <div className="why-top">
           <div>
-            <span className="eyebrow reveal">Real skills. Real confidence.</span>
-            <h2 className="reveal">Build confidence before takeoff.</h2>
-            <p className="lede reveal">Learn the controls safely, before the real thing.</p>
+            <span className="eyebrow reveal">Real skills Real confidence</span>
+            <h2 className="reveal">Build confidence before takeoff</h2>
+            <p className="lede reveal">Learn the controls safely before the real thing</p>
             <div className="why-feats">
-              <div className="reveal"><span className="icon"><Icon id="i-shield" /></span><h3>No hardware risk</h3><p>Crash freely. Press <span className="kbd">R</span> to reset.</p></div>
-              <div className="reveal"><span className="icon"><Icon id="i-bars" /></span><h3>Learn faster</h3><p>Repeat any lesson.</p></div>
-              <div className="reveal"><span className="icon"><Icon id="i-gear" /></span><h3>Real physics</h3><p>A real flight controller.</p></div>
+              <div className="reveal"><span className="icon"><Icon id="i-shield" /></span><h3>No hardware risk</h3><p>Crash freely Press <span className="kbd">R</span> to reset</p></div>
+              <div className="reveal"><span className="icon"><Icon id="i-bars" /></span><h3>Learn faster</h3><p>Repeat any lesson</p></div>
+              <div className="reveal"><span className="icon"><Icon id="i-gear" /></span><h3>Real physics</h3><p>A real flight controller</p></div>
             </div>
           </div>
           <div className="sim reveal" aria-label="Preview of the PlutoSim flight screen">
@@ -79,13 +79,13 @@ export default function Why() {
 
         <div className="smarter card reveal">
           <div>
-            <h2>A safer way to become a better pilot.</h2>
+            <h2>A safer way to become a better pilot</h2>
           </div>
           <img className="pad-img" src="/assets/images/controls/gamepad.webp" alt="A game controller" width="1405" height="959" loading="lazy" />
           <ul className="ticks">
-            <li><span className="icon"><Icon id="i-cap" /></span><div><b>Guided lessons</b>Shown, then scored.</div></li>
-            <li><span className="icon"><Icon id="i-trend" /></span><div><b>Build real skills</b>Control and judgement.</div></li>
-            <li><span className="icon"><Icon id="i-star" /></span><div><b>Perfect for all levels</b>Beginner to Acro.</div></li>
+            <li><span className="icon"><Icon id="i-cap" /></span><div><b>Guided lessons</b>Shown then scored</div></li>
+            <li><span className="icon"><Icon id="i-trend" /></span><div><b>Build real skills</b>Control and judgement</div></li>
+            <li><span className="icon"><Icon id="i-star" /></span><div><b>Perfect for all levels</b>Beginner to Acro</div></li>
           </ul>
         </div>
       </div>

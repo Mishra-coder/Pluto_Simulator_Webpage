@@ -11,7 +11,7 @@ export default function Missions({ map, onPickMap }) {
       <div className="wrap">
         <span className="eyebrow reveal">Explore diverse environments</span>
         <h2 className="reveal">Mission Maps</h2>
-        <p className="lede reveal">10 missions across 4 maps.</p>
+        <p className="lede reveal">10 missions across 4 maps</p>
         <div className="maps">
           <div className="map-list reveal" role="tablist" aria-label="Maps">
             {MAPS.map((m) => (
