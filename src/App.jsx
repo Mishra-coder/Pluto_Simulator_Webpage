@@ -8,8 +8,6 @@ import Controls from "./components/Controls.jsx";
 import FlightSchool from "./components/FlightSchool.jsx";
 import Missions from "./components/Missions.jsx";
 import Drones from "./components/Drones.jsx";
-import Gallery from "./components/Gallery.jsx";
-import Checklist from "./components/Checklist.jsx";
 import Faq from "./components/Faq.jsx";
 import Footer from "./components/Footer.jsx";
 import { usePlatform, useReveal } from "./hooks.js";
@@ -31,8 +29,6 @@ export default function App() {
       <FlightSchool />
       <Missions map={missionMap} onPickMap={setMissionMap} />
       <Drones />
-      <Gallery />
-      <Checklist />
       <Faq />
       <Footer />
     </>

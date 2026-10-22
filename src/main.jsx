@@ -13,8 +13,6 @@ import "./styles/sections/controls.css";
 import "./styles/sections/school.css";
 import "./styles/sections/missions.css";
 import "./styles/sections/drones.css";
-import "./styles/sections/gallery.css";
-import "./styles/sections/checklist.css";
 import "./styles/sections/faq.css";
 import "./styles/sections/footer.css";
 
