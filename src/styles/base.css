@@ -19,6 +19,9 @@ section{padding:120px 0;position:relative}
 .scene canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .scene::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,var(--bg))}
 .has-scene{isolation:isolate;overflow:hidden}
+/* section photo backdrop: each section sets --photo; the picture keeps its own aspect top-right, its dark left sits behind
+   the heading and the bottom fades into the page so the cards below stay readable */
+.has-photo::before{content:"";position:absolute;z-index:-1;top:0;right:0;width:min(84%,1500px);aspect-ratio:1695/928;pointer-events:none;background:linear-gradient(transparent 58%,rgba(7,11,19,.55) 80%,var(--bg)),var(--photo) var(--photo-pos,70% 30%)/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%);mask-image:linear-gradient(90deg,transparent,#000 12%)}
 
 /* shared card surface */
 .card{position:relative;border-radius:var(--radius);background:var(--card);box-shadow:inset 0 0 0 1px var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
@@ -28,4 +31,4 @@ section{padding:120px 0;position:relative}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
-@media(max-width:900px){section{padding:88px 0}.scene{width:100%;opacity:.55;-webkit-mask-image:none;mask-image:none}}
+@media(max-width:900px){section{padding:88px 0}.scene{width:100%;opacity:.55;-webkit-mask-image:none;mask-image:none}.has-photo::before{width:100%;aspect-ratio:auto;height:min(70vh,110vw);background:linear-gradient(rgba(7,11,19,.5),rgba(7,11,19,.6) 55%,var(--bg)),var(--photo) var(--photo-pos-m,75% 40%)/cover no-repeat;-webkit-mask-image:none;mask-image:none}}

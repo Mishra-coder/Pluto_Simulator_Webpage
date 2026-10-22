@@ -1,5 +1,4 @@
 import { Icon } from "./Icon.jsx";
-import Scene from "./Scene.jsx";
 
 const FEATURES = [
   ["i-target", "Realistic physics", "Wind, drag and battery sag."],
@@ -10,11 +9,10 @@ const FEATURES = [
   ["i-modes", "3 flight modes", "Stabilize, Altitude Hold, Acro."],
 ];
 
-/* 06 · Features */
+/* 06 · Features: sunset city photo behind the heading (CSS background), feature grid and controller card */
 export default function Features() {
   return (
-    <section id="basics" className="has-scene">
-      <Scene seed={11} sun={0.8} />
+    <section id="basics" className="has-scene has-photo">
       <div className="wrap">
         <span className="eyebrow reveal">Realistic and practical</span>
         <h2 className="reveal">Everything you need<br />to become a better pilot.</h2>
@@ -26,7 +24,7 @@ export default function Features() {
             ))}
           </div>
           <a className="pad-card card reveal" href="#controls">
-            <Icon id="gamepad" className="pad-img" viewBox="0 0 400 260" />
+            <img className="pad-img" src="/assets/images/controls/gamepad.webp" alt="" width="1405" height="959" loading="lazy" />
             <div><Icon id="i-pad" className="pad-ic" /><h3>Works with controller</h3><p>Gamepad or RC transmitter.</p></div>
           </a>
         </div>

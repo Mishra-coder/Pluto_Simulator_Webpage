@@ -1,12 +1,18 @@
 import { Icon } from "./Icon.jsx";
-import Scene from "./Scene.jsx";
 
-/* callouts on the controller drawing (viewBox 900×420; the pad is drawn at 250,80): label position, leader line, end dot */
+/* callouts on the controller photo (viewBox 900×420 plus head/foot room; the 1405×959 photo is drawn 420 wide at 240,66):
+   sticks at 346,137 (left) and 506,204 (right); face buttons Y 561,120 · X 532,148 · B 590,149 · A 561,177; LB 364,78.
+   Each entry: label position, leader line, end dot. Leaders are routed so none of them cross */
 const CALLOUTS = [
-  { title: "Throttle", sub: "Left stick ↑ ↓", x: 196, y: 64, end: "end", path: "M200 70H370V146", dot: [370, 146] },
-  { title: "Yaw", sub: "Left stick ← →", x: 196, y: 286, end: "end", path: "M200 292H310V175H341", dot: [341, 175] },
-  { title: "Pitch", sub: "Right stick ↑ ↓", x: 708, y: 102, end: "start", path: "M700 108H500V201", dot: [500, 201] },
-  { title: "Roll", sub: "Right stick ← →", x: 708, y: 324, end: "start", path: "M700 330H580V230H529", dot: [529, 230] },
+  { title: "Flight mode", sub: "LB · RB bumpers", x: 196, y: -14, end: "end", path: "M200 -8H364V72", dot: [364, 72] },
+  { title: "Throttle", sub: "Left stick ↑ ↓", x: 196, y: 64, end: "end", path: "M200 70H346V116", dot: [346, 116] },
+  { title: "Yaw", sub: "Left stick ← →", x: 196, y: 286, end: "end", path: "M200 292H296V137H325", dot: [325, 137] },
+  { title: "Pitch", sub: "Right stick ↑ ↓", x: 708, y: 0, end: "start", path: "M700 6H506V183", dot: [506, 183] },
+  { title: "Auto take-off", sub: "Y button", x: 708, y: 114, end: "start", path: "M700 120H574", dot: [574, 120] },
+  { title: "Reset", sub: "B button", x: 708, y: 196, end: "start", path: "M700 202H630V149H603", dot: [603, 149] },
+  { title: "Arm / Disarm", sub: "A button", x: 708, y: 286, end: "start", path: "M700 292H610V177H574", dot: [574, 177] },
+  { title: "Camera view", sub: "X button", x: 708, y: 376, end: "start", path: "M700 382H532V161", dot: [532, 161] },
+  { title: "Roll", sub: "Right stick ← →", x: 708, y: 466, end: "start", path: "M700 472H506V226", dot: [506, 226] },
 ];
 
 const KEYS = [
@@ -21,20 +27,19 @@ const SUPPORT = [
   ["i-keyboard", "No pad? No problem", "Keyboard works too."],
 ];
 
-/* 07 · Controls */
+/* 07 · Controls: sim desk photo behind the heading (CSS background), controller diagram and support card */
 export default function Controls() {
   return (
-    <section id="controls" className="has-scene">
-      <Scene seed={23} sun={0.7} />
+    <section id="controls" className="has-scene has-photo">
       <div className="wrap">
         <span className="eyebrow reveal">Practise with your setup</span>
         <h2 className="reveal">Fly with a controller</h2>
         <p className="lede reveal">Mode 2, just like a real transmitter.</p>
         <div className="ctl">
           <div className="diagram reveal">
-            <svg viewBox="0 0 900 420" role="img" aria-labelledby="dgT">
-              <title id="dgT">Controller layout: left stick moves throttle up and down and yaw left and right; right stick moves pitch forward and back and roll left and right.</title>
-              <use href="#gamepad" x="250" y="80" width="400" height="260" />
+            <svg viewBox="0 -40 900 545" role="img" aria-labelledby="dgT">
+              <title id="dgT">Controller layout: left stick moves throttle up and down and yaw left and right; right stick moves pitch forward and back and roll left and right. The bumpers change flight mode, A arms and disarms, Y takes off automatically, X changes the camera view and B resets.</title>
+              <image className="pad" href="/assets/images/controls/gamepad.webp" x="240" y="66" width="420" height="287" />
               <g className="lines">
                 {CALLOUTS.map((c) => <g key={c.title}><path d={c.path} /><circle cx={c.dot[0]} cy={c.dot[1]} r="5" /></g>)}
               </g>

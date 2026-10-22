@@ -1,6 +1,8 @@
 /* Controller diagram, keyboard map and controller-support card */
+#controls{--photo:url("/assets/images/controls/desk-sunset-sim.jpg");--photo-pos:70% 30%;--photo-pos-m:78% 40%}
 .ctl{display:grid;grid-template-columns:1.35fr 1fr;gap:32px;margin-top:40px;align-items:center}
 .diagram svg{width:100%;height:auto;display:block;overflow:visible}
+.diagram .pad{filter:drop-shadow(0 24px 30px rgba(0,0,0,.6)) drop-shadow(0 0 40px rgba(255,122,26,.12))}
 .diagram .lines path{fill:none;stroke:var(--signal);stroke-width:2}
 .diagram .lines circle{fill:var(--signal)}
 .diagram text{fill:var(--ink-2);font:400 20px var(--sans)}

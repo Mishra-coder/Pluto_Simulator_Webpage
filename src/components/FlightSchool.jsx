@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Icon } from "./Icon.jsx";
-import Scene from "./Scene.jsx";
 import { LESSON_BLOCKS, LESSONS } from "../data/site.js";
 
-/* 03 · Flight School: pick a block, see its lessons */
+/* 03 · Flight School: training-field photo behind the heading (CSS background); pick a block, see its lessons */
 export default function FlightSchool() {
   const [block, setBlock] = useState(LESSON_BLOCKS[0].key);
   return (
-    <section id="school" className="has-scene">
-      <Scene seed={5} sun={0.82} />
+    <section id="school" className="has-scene has-photo">
       <div className="wrap">
         <span className="eyebrow reveal">Step by step challenges</span>
         <h2 className="reveal">Flight School</h2>

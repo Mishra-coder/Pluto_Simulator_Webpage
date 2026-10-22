@@ -1,5 +1,6 @@
 /* Features grid and controller card */
-.feat-wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;margin-top:56px;align-items:end}
+#basics{--photo:url("/assets/images/features/city-sunset-drone.jpg");--photo-pos:70% 30%;--photo-pos-m:72% 30%}
+.feat-wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;margin-top:56px;align-items:stretch}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .feat{padding:26px 24px;min-height:200px}
 .feat .icon{width:auto;height:auto;background:none;box-shadow:none;justify-content:start}
@@ -7,7 +8,8 @@
 .feat h3{font-size:20px;letter-spacing:-.02em;margin-top:20px}
 .feat p{margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45}
 .pad-card{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center;padding:28px;min-height:300px;text-decoration:none;transition:box-shadow .3s}
-.pad-card:hover{box-shadow:inset 0 0 0 1px rgba(255,122,26,.5)}
+.pad-card{box-shadow:inset 0 0 0 1px rgba(255,122,26,.45)}
+.pad-card:hover{box-shadow:inset 0 0 0 1px rgba(255,122,26,.8)}
 .pad-ic{width:40px;height:40px}
 .pad-card h3{font-size:26px;margin-top:12px}
 .pad-card p{margin:10px 0 0;color:var(--ink-2);font-size:15px}
