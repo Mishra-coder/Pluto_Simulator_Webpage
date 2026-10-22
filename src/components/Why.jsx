@@ -81,7 +81,7 @@ export default function Why() {
           <div>
             <h2>A safer way to become a better pilot.</h2>
           </div>
-          <Icon id="gamepad" className="pad-img" viewBox="0 0 400 260" label="A game controller" />
+          <img className="pad-img" src="/assets/images/controls/gamepad.webp" alt="A game controller" width="1405" height="959" loading="lazy" />
           <ul className="ticks">
             <li><span className="icon"><Icon id="i-cap" /></span><div><b>Guided lessons</b>Shown, then scored.</div></li>
             <li><span className="icon"><Icon id="i-trend" /></span><div><b>Build real skills</b>Control and judgement.</div></li>

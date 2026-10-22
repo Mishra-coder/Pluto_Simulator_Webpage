@@ -11,7 +11,7 @@
 .sim .card{position:absolute;top:16px;bottom:16px;border-radius:16px;padding:16px;background:rgba(9,13,22,.78);font-size:13px}
 .sim-tele{left:16px;width:clamp(150px,22%,190px);display:flex;flex-direction:column;gap:12px}
 .sim-status{display:flex;align-items:center;justify-content:space-between;color:#7fd3ff}
-.sim-status svg{width:30px;height:30px}
+.sim-status svg{width:30px;height:30px;color:#fff}
 .batt{width:34px;height:16px;border-radius:4px;box-shadow:inset 0 0 0 1.5px var(--ok);padding:2.5px;position:relative}
 .batt::after{content:"";position:absolute;right:-4px;top:5px;width:2px;height:6px;background:var(--ok);border-radius:1px}
 .batt i{display:block;height:100%;width:80%;background:var(--ok);border-radius:2px;transition:width 1s}
